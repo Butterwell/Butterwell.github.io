@@ -9,18 +9,57 @@
 
 </head>
 <style>
-.quarter-size {
-        -ms-zoom: 0.25;
-        -moz-transform: scale(0.25);
-        -moz-transform-origin: 0 0;
-        -o-transform: scale(0.25);
-        -o-transform-origin: 0 0;
-        -webkit-transform: scale(0.25);
-        -webkit-transform-origin: 0 0;
-}
-.cover {
+.two-fifths-scale {
+    -ms-zoom: 0.40;
+    -moz-transform: scale(0.40);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.40);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.40);
+    -webkit-transform-origin: 0 0;
+    width: 100%;
+    height: 100%;
 }
 
+.quarter-scale {
+    -ms-zoom: 0.25;
+    -moz-transform: scale(0.25);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.25);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.25);
+    -webkit-transform-origin: 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap-iframe-as-button {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+.iframe-as-button {
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+}
+
+.button-on-iframe {
+    position: absolute;
+    background: rgba(2,117,216,0.01); /* #0275d8 */
+    /*background: rgba(255,255,255,0.01); */
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.iframe-loading {
+  visibility: hidden;
+  opacity: 0;
+}
 
 </style>
 <body>
@@ -30,30 +69,52 @@
 Christopher Michael Buck (Butterwell)
 </div>
 <div class="row">
-<div class="card col-sm-6 col-xs-12">
-  <div class="card-block">
+<div class="col-sm-6 col-xs-12">
+  <div class="card card-block">
     <h4 class="card-title">The Visualization Picayune</h4>
     <p class="card-text">A blog about visualization which sometimes focuses on nearly trivial details.</p>
-    <a href="https://vp.exploratori.us" class="btn btn-primary">Get Picayune!</a>
-<!--
-    <div class="quarter-size" width="%100" height="%100">
-      <iframe width="300%" height="300%" src='https://vp.exploratori.us'></iframe>
-    </div>
---->
+    <div class="btn-group" role="group" style="width: 100%">
+      <a href="https://vp.exploratori.us" class="btn btn-primary" style="width: 40%">Get Picayune!</a>
+      <div class="btn btn-primary wrap-iframe-as-button" style="width: 60%; height: 2.4em">
+        <div style="position: absolute">&nbsp</div>
+        <a href="https://vp.exploratori.us" class="button-on-iframe" style="width: 100%; height: 2.4em"></a>
+        <div class="quarter-scale">
+          <iframe id="vp-frame" class="iframe-as-button iframe-loading" scrolling="no" width="400%" height="400%" src='https://vp.exploratori.us'></iframe>
+        </div>
+      </div>
+    </div> 
   </div>
 </div>
 
-<div class="card col-sm-6 col-xs-12">
-  <div class="card-block">
+<div class="col-sm-6 col-xs-12">
+  <div class="card card-block">
     <h4 class="card-title">My Font-changing Resume</h4>
     <p class="card-text">Don't like the fonts? Refresh. (The font pairings are random, not curated.)</p>
-    <a href="https://butterwell.github.io/resume" class="btn btn-primary">Hit me!</a>
+    <div class="btn-group" role="group" style="width: 100%">
+      <a href="https://butterwell.github.io/resume" class="btn btn-primary" style="width: 40%">All of it!</a>
+      <div class="btn btn-primary wrap-iframe-as-button" style="width: 60%; height: 2.4em">
+        <a href="https://butterwell.github.io/resume" class="button-on-iframe" style="width: 100%; height: 2.4em"></a>
+        <div class="two-fifths-scale">
+          <iframe id="resume-frame" style="-webkit-clip-path: inset(24% 0%); top: -18px;" class="iframe-as-button iframe-loading" scrolling="no" width="250%" height="450%" src='https://butterwell.github.io/resume'></iframe>
+        </div>
+      </div>
+    </div> 
   </div>
 </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script>
+$('#resume-frame').on("load", function(){
+  $('#resume-frame').css("visibility","visible")
+  $('#resume-frame').delay(1000).fadeTo('slow', 1);
+})
+$('#vp-frame').on("load", function(){
+  $('#vp-frame').css("visibility","visible")
+  $('#vp-frame').delay(1000).fadeTo('slow', 1);
+})
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
 <script>window.Tether || document.write('<script src="js/tether.min.js"><\/script>')</script>
 
