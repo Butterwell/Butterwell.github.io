@@ -33,33 +33,40 @@
     height: 100%;
 }
 
-.wrap-iframe-as-button {
-   position: relative;
-   width: 100%;
-   height: 100%;
+.button-cover-color {
+  color: #fff;
+  background: rgba(2,117,216,0.01); /* #0275d8 */
+  /*background: rgba(255,255,255,0.01); */
 }
 
-.iframe-as-button {
-  position: absolute;
-  z-index: 0;
-  overflow: hidden;
-  top: 0px;
-  left: 0px;
-}
-
-.button-on-iframe {
-    position: absolute;
-    background: rgba(2,117,216,0.01); /* #0275d8 */
-    /*background: rgba(255,255,255,0.01); */
-    top: 0px;
-    left: 0px;
-    z-index: 1;
+.button-cover-color:hover {
+  color: #fff;
+  background-color: rgba(2,90,165,0.5); /* #025aa5; */
+  border-color: #01549b;
 }
 
 .iframe-loading {
   visibility: hidden;
   opacity: 0;
 }
+
+#vp-frame {
+  height: 80px;
+}
+
+#resume-frame {
+  height: 80px;
+}
+
+/*
+.clear-column {
+  background: linear-gradient(90deg, #0275d8, #0275d8 30%, rgba(255,255,255,0.01) 30.1%, rgba(255,255,255,0.01) 70%, #0275d8 70.1%, #0275d8)
+}
+
+.clear-row {
+  background: linear-gradient(#0275d8, #0275d8 30%, rgba(255,255,255,0.01) 30.1%, rgba(255,255,255,0.01) 70%, #0275d8 70.1%, #0275d8)
+}
+*/
 
 </style>
 <body>
@@ -73,15 +80,18 @@ Christopher Michael Buck (Butterwell)
   <div class="card card-block">
     <h4 class="card-title">The Visualization Picayune</h4>
     <p class="card-text">A blog about visualization which sometimes focuses on nearly trivial details.</p>
-    <div class="btn-group" role="group" style="width: 100%">
-      <a href="https://vp.exploratori.us" class="btn btn-primary" style="width: 40%">Get Picayune!</a>
-      <div class="btn btn-primary wrap-iframe-as-button" style="width: 60%; height: 2.36em">
-        <div style="position: absolute">&nbsp</div>
-        <a href="https://vp.exploratori.us" class="button-on-iframe" style="width: 100%; height: 2.36em"></a>
-        <div class="quarter-scale">
-          <iframe id="vp-frame" class="iframe-as-button iframe-loading" scrolling="no" width="400%" height="400%" src='https://vp.exploratori.us'></iframe>
+    <div style="position: relative">
+      <a href="https://vp.exploratori.us" class="btn btn-primary" style="text-align: left; position: absolute; width: 100%">Get Picayune!</a>
+      <div style="position: absolute; top: 0; left: 0; width: 100%">
+       <div style="position: relative; float: right; width: 60%">
+        <div class="btn" style="position: absolute; top: 0; left: 0;">
+            <div class="quarter-scale">
+              <iframe id="vp-frame" class="iframe-loading" scrolling="no" width="400%" src='https://vp.exploratori.us'></iframe>
+            </div>
         </div>
+       </div>
       </div>
+      <a href="https://vp.exploratori.us" class="btn button-cover-color" style="text-align: left; position: relative; width: 100%">Get Picayune!</a>
     </div> 
   </div>
 </div>
@@ -90,15 +100,18 @@ Christopher Michael Buck (Butterwell)
   <div class="card card-block">
     <h4 class="card-title">My Font-changing Resume</h4>
     <p class="card-text">Don't like the fonts? Refresh. (The font pairings are random, not curated.)</p>
-    <div class="btn-group" role="group" style="width: 100%">
-      <a href="https://butterwell.github.io/resume" class="btn btn-primary" style="width: 40%">All of it!</a>
-      <div class="btn btn-primary wrap-iframe-as-button" style="width: 60%; height: 2.36em">
-        <a href="https://butterwell.github.io/resume" class="button-on-iframe" style="width: 100%; height: 2.36em"></a>
-        <div class="two-fifths-scale">
-          <!--<iframe id="resume-frame" style="-webkit-clip-path: inset(24% 0%); top: -18px;" class="iframe-as-button iframe-loading" scrolling="no" width="250%" height="450%" src='https://butterwell.github.io/resume'></iframe>-->
-          <iframe id="resume-frame" style="clip: rect(30px, auto, auto, auto); top: -30px;" class="iframe-as-button iframe-loading" scrolling="no" width="250%" height="400%" src='https://butterwell.github.io/resume'></iframe>
+    <div style="position: relative">
+      <a href="https://butterwell.github.io/resume" class="btn btn-primary" style="text-align: left; position: absolute; width: 100%">Let me see!</a>
+      <div style="position: absolute; top: 0; left: 0; width: 100%">
+       <div style="position: relative; float: right; width: 60%">
+        <div class="btn" style="position: absolute; top: 0; left: 0; clip: rect(18px, auto, auto, auto); top: -9px;">
+            <div class="two-fifths-scale">
+              <iframe id="resume-frame" class="iframe-loading" scrolling="no" width="250%" src='https://butterwell.github.io/resume'></iframe>
+            </div>
         </div>
+       </div>
       </div>
+      <a href="https://butterwell.github.io/resume" class="btn button-cover-color" style="text-align: left; position: relative; width: 100%">Let me see!</a>
     </div> 
   </div>
 </div>
