@@ -1,169 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="author" content="Christopher Michael Buck">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-</head>
-<style>
-.two-fifths-scale {
-    -ms-zoom: 0.40;
-    -moz-transform: scale(0.40);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.40);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.40);
-    -webkit-transform-origin: 0 0;
-    width: 100%;
-    height: 100%;
-}
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        display: inline-block;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        line-height: 1em;
+      }
+      article {
+        margin-left: 4em;
+        max-width: 40em;
+      }
+      .site-link {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        font-size: 1.3em;
+        margin-left: 2em;
+      }
+            .site-link a {
+        margin-right: 0.2em;
+      }
+      .inline {
+        display: inline-block;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
 
-.quarter-scale {
-    -ms-zoom: 0.25;
-    -moz-transform: scale(0.25);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.25);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.25);
-    -webkit-transform-origin: 0 0;
-    width: 100%;
-    height: 100%;
-}
-
-.button-cover-color {
-  color: #fff;
-  background: rgba(2,117,216,0.01); /* #0275d8 */
-  /*background: rgba(255,255,255,0.01); */
-}
-
-.button-cover-color:hover {
-  color: #fff;
-  background-color: rgba(2,90,165,0.5); /* #025aa5; */
-  border-color: #01549b;
-}
-
-.iframe-loading {
-  visibility: hidden;
-  opacity: 0;
-}
-
-#vp-frame {
-  height: 80px;
-}
-
-#resume-frame {
-  height: 80px;
-}
-
-#days-of-code-frame {
-  height: 80px;
-}
-
-/*
-.clear-column {
-  background: linear-gradient(90deg, #0275d8, #0275d8 30%, rgba(255,255,255,0.01) 30.1%, rgba(255,255,255,0.01) 70%, #0275d8 70.1%, #0275d8)
-}
-
-.clear-row {
-  background: linear-gradient(#0275d8, #0275d8 30%, rgba(255,255,255,0.01) 30.1%, rgba(255,255,255,0.01) 70%, #0275d8 70.1%, #0275d8)
-}
-*/
-
-</style>
 <body>
-<div class="container">
-
-<div class="row">
-Christopher Michael Buck (Butterwell)
-</div>
-<div class="row">
-<div class="col-sm-6 col-xs-12">
-  <div class="card card-block">
-    <h4 class="card-title">The Visualization Picayune</h4>
-    <p class="card-text">A blog about visualization which sometimes focuses on nearly trivial details.</p>
-    <div style="position: relative">
-      <a href="https://vp.exploratori.us" class="btn btn-primary" style="text-align: left; position: absolute; width: 100%">Get Picayune!</a>
-      <div style="position: absolute; top: 0; left: 0; width: 100%">
-       <div style="position: relative; float: right; width: 60%">
-        <div class="btn" style="position: absolute; top: 0; left: 0;">
-            <div class="quarter-scale">
-              <iframe id="vp-frame" class="iframe-loading" scrolling="no" width="400%" src='https://vp.exploratori.us'></iframe>
-            </div>
-        </div>
-       </div>
-      </div>
-      <a href="https://vp.exploratori.us" class="btn button-cover-color" style="text-align: left; position: relative; width: 100%">Get Picayune!</a>
-    </div> 
-  </div>
-</div>
-
-<div class="col-sm-6 col-xs-12">
-  <div class="card card-block">
-    <h4 class="card-title">My Font-changing Resume</h4>
-    <p class="card-text">Don't like the fonts? Refresh. (The font pairings are random, not curated.)</p>
-    <div style="position: relative">
-      <a href="https://butterwell.github.io/resume" class="btn btn-primary" style="text-align: left; position: absolute; width: 100%">Let me see!</a>
-      <div style="position: absolute; top: 0; left: 0; width: 100%">
-       <div style="position: relative; float: right; width: 60%">
-        <div class="btn" style="position: absolute; top: 0; left: 0; clip: rect(18px, auto, auto, auto); top: -9px;">
-            <div class="two-fifths-scale">
-              <iframe id="resume-frame" class="iframe-loading" scrolling="no" width="250%" src='https://butterwell.github.io/resume'></iframe>
-            </div>
-        </div>
-       </div>
-      </div>
-      <a href="https://butterwell.github.io/resume" class="btn button-cover-color" style="text-align: left; position: relative; width: 100%">Let me see!</a>
-    </div> 
-  </div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-sm-6 col-xs-12">
-  <div class="card card-block">
-    <h4 class="card-title">100 Days of Code</h4>
-    <p class="card-text">A FreeCodeCamp <a href="https://medium.freecodecamp.com/start-2017-with-the-100daysofcode-improved-and-updated-18ce604b237b#.qplkrj71z">challenge</a>.</p>
-    <div style="position: relative">
-      <a href="https://butterwell.github.io/100-days-of-code" class="btn btn-primary" style="text-align: left; position: absolute; width: 100%">Let me see!</a>
-      <div style="position: absolute; top: 0; left: 0; width: 100%">
-       <div style="position: relative; float: right; width: 60%">
-        <div class="btn" style="position: absolute; left: 0; clip: rect(18px, auto, auto, auto); top: -9px;">
-            <div class="two-fifths-scale">
-              <iframe id="days-of-code-frame" class="iframe-loading" scrolling="no" width="250%" src='https://butterwell.github.io/100-days-of-code'></iframe>
-            </div>
-        </div>
-       </div>
-      </div>
-      <a href="https://butterwell.github.io/100-days-of-code" class="btn button-cover-color" style="text-align: left; position: relative; width: 100%">Let me see!</a>
-    </div> 
-  </div>
-</div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-<script>
-$('#days-of-code-frame').on("load", function(){
-  $('#days-of-code-frame').css("visibility","visible")
-  $('#days-of-code-frame').delay(1000).fadeTo('slow', 1);
-})
-$('#resume-frame').on("load", function(){
-  $('#resume-frame').css("visibility","visible")
-  $('#resume-frame').delay(1000).fadeTo('slow', 1);
-})
-$('#vp-frame').on("load", function(){
-  $('#vp-frame').css("visibility","visible")
-  $('#vp-frame').delay(1000).fadeTo('slow', 1);
-})
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-<script>window.Tether || document.write('<script src="js/tether.min.js"><\/script>')</script>
-
-<script src="js/bootstrap.js"></script>
-<script src="js/ie10-viewport-bug-workaround.js"></script>
+  <h1 class="inline" >Christopher Buck</h1>
+  <span class="site-link">
+  <a href="https://twitter.com/butterwell" rel="me">@butterwell on Twitter</a>
+  <a href="https://github.com/butterwell" rel="me">Butterwell on Github</a>
+  </span>
 </body>
 </html>
