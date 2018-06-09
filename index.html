@@ -7,6 +7,7 @@
       @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import 'bands.css';
 
       body { font-family: 'Droid Serif'; }
       h1, h2, h3 {
@@ -34,13 +35,60 @@
       .hide {
         display: none;
       }
-    </style>
+.square {
+    float:left;
+    position: relative;
+    width: 5%;
+    padding-bottom : 5%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    /*background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; */ /* you change this to "contain" if you don't want the images to be cropped */
+}
 
+.card {
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <body>
   <h1 class="inline" >Christopher Buck</h1>
   <span class="site-link">
   <a href="https://twitter.com/butterwell" rel="me">@butterwell on Twitter</a>
   <a href="https://github.com/butterwell" rel="me">Butterwell on Github</a>
   </span>
+
+  <div id="container">
+    <card
+      v-for="post in posts"
+      v-bind:post="post"
+    ></card>
+  </div>
+
+<script type="text/x-template" id="card">
+<a class="card-link" href="#">
+  <article class="card square" v-bind:class="post">
+    <div class="article-details">
+      <div></div>
+  </article>
+</a>
+</script>
+  <script>
+Vue.component('card', {
+  props: ["post"],
+  template: '#card'
+});
+
+var cbs = []
+for (var i = 0; i < 108; i++) {
+   cbs.push("cb_"+i)
+}
+var app = new Vue({
+    el: '#container',
+    data: {
+        posts: cbs
+    }
+})
+  </script>
 </body>
 </html>
