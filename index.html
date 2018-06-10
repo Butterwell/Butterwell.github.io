@@ -61,14 +61,14 @@
 
   <div id="container">
     <card
-      v-for="post in posts"
-      v-bind:post="post"
+      v-for="cardband in cardbands"
+      v-bind:cardband="cardband"
     ></card>
   </div>
 
 <script type="text/x-template" id="card">
 <a class="card-link" href="#">
-  <article class="card square" v-bind:class="post">
+  <article class="card square" v-bind:class="cardband">
     <div class="article-details">
       <div></div>
   </article>
@@ -76,18 +76,19 @@
 </script>
   <script>
 Vue.component('card', {
-  props: ["post"],
+  props: ["cardband"],
   template: '#card'
 });
 
-var cbs = []
+// cb_0 through cb_107 are in bands.css
+var cardbands = []
 for (var i = 0; i < 108; i++) {
-   cbs.push("cb_"+i)
+   cardbands.push("cb_"+i)
 }
 var app = new Vue({
     el: '#container',
     data: {
-        posts: cbs
+        cardbands: cardbands
     }
 })
   </script>
