@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <style type="text/css">
+  <title>Christopher Michael Buck</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <style type="text/css">
       @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
@@ -50,8 +50,9 @@
 .card {
 }
 
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
 <body>
   <h1 class="inline" >Christopher Buck</h1>
   <span class="site-link">
@@ -67,6 +68,14 @@
   </div>
 
 <script type="text/x-template" id="card">
+<a class="card-link" href="#">
+  <article class="card square" v-bind:class="cardband">
+    <div class="article-details">
+      <div></div>
+  </article>
+</a>
+</script>
+<script type="text/x-template" id="cardrow">
 <a class="card-link" href="#">
   <article class="card square" v-bind:class="cardband">
     <div class="article-details">
