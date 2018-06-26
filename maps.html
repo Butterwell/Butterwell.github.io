@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .site-link {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        font-size: 1.3em;
+        margin-left: 2em;
+      }
+      .site-link a {
+        margin-right: 0.2em;
+      }
+      .inline {
+        display: inline-block;
+      }
+
+
+      body,
+      svg {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        float: left;
+      }
+
+.station {
+  fill: rgba(0,0,0,0.2);
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+
+.station-cell {
+  stroke: #000;
+  stroke-opacity: .5;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.country {
+  fill: #b8b8b8;
+  stroke: #fff;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+}
+
+.graticule {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .3;
+  stroke-width: .5px;
+}
+
+.graticule-outline {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-anchor: left;
+}
+</style>
+
+</head>
+<body>
+  <h1 class="inline" >Christopher Buck</h1>
+  <span class="site-link">
+  <a href="/" rel="me">Home</a>
+  <a href="https://twitter.com/butterwell" rel="me">@butterwell on Twitter</a>
+  <a href="https://github.com/butterwell" rel="me">Butterwell on Github</a>
+  </span>
+
+  <script src="//d3js.org/d3.v4.min.js"></script>
+  <script src="//d3js.org/topojson.v1.min.js"></script>
+  <script src="//d3js.org/d3-array.v1.min.js"></script>
+  <script src="//d3js.org/d3-geo.v1.min.js"></script>
+  <script src="//d3js.org/d3-voronoi.v1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.core.min.js"></script>
+  <script src="js/maps.js"></script>
+</body>
+</html>
